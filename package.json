@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@octokit/rest": "^21.0.2",
     "cns": "file:",
     "next": "15.0.3",
     "react": "19.0.0-rc-66855b96-20241106",
