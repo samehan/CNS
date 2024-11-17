@@ -38,7 +38,7 @@ export default async function handler(
 
     res.status(200).json({ message: "Domain added successfully" });
   } catch (error) {
-    res.status(500).json({ message: "Error adding domain" });
+    res.status(500).json({ message: "Error adding domain" + error });
   }
 }
 
@@ -62,6 +62,7 @@ async function getExistingContent() {
     }
     return "";
   } catch (error) {
+    console.log(error);
     return "";
   }
 }
@@ -81,6 +82,7 @@ async function getSHA() {
 
     throw new Error("File not found or unexpected response structure");
   } catch (error) {
+    console.log(error);
     return "";
   }
 }
